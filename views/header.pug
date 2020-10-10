@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css")
+        link(rel="shortcut icon" type="image/png" href="http://localhost:3000/public//img/dog.png")
+        link(href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata&family=Sansita+Swashed&display=swap" rel="stylesheet")
+        title KJSC
+
+        style
+            include ../public/stylesheets/style.css
+    body
+        header
+        noscript You need to enable JavaScript to run this app.
+
+        div(class="ui pointing menu" style="margin-top: 0px; padding: 8px 0; margin-bottom:0px; background-color:#f5fbfd;") 
+            a(href="/" class="cursor topheader" style="font-family: 'Bad Script', cursive;") KJSC
+            div(class="right menu")
+                div(class="item")
+                    div(class="ui transparent icon input")
+                        input(type="text" placeholder="Search...")
+                        i(class="search link icon")
+
+        block content
+

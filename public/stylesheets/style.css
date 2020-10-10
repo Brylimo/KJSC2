@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+.topheader {
+    margin: auto 0;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.topheader:hover {
+    color: gray;
+}
+
+.bottomheader {
+    display: block;
+    margin: auto 0;
+    padding: 75px 15px 50px 15px;
+    font-size: 50px;
+    font-weight: 300;
+    color: #d23737;
+}
+
+.bottomheader:hover {
+    color: gray;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.itemsize {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.itemsize:hover {
+    color: #d23737 !important;
+}
+
+.background {
+   width: 60%;
+   height: 60%;
+}
+
+.align {
+    text-align: center;
+}
