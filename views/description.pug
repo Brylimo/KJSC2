@@ -1,0 +1,19 @@
+extends header.pug
+
+block content
+    div(class="ui" style="text-align:center;")
+        h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;")= row.title
+
+    div(class="paragraph")
+        p= row.content
+
+    - const url1 = `${row.id}/update`
+    - const url2 = `${row.id}/delete_process`
+
+    button(type="button")
+        a(href=url1) update
+
+    form(action=url2 method="post")
+        input(type="hidden" name="id" value=row.id)
+        input(type="submit" value="delete")
+

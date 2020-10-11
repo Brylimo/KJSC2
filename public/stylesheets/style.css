@@ -51,6 +51,17 @@ footer {
     font-weight: 300;
 }
 
+.paragraph {
+    width: 70%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 5rem;
+    padding: 3rem;  
+}
+
 .cursor {
     cursor: pointer;
 }

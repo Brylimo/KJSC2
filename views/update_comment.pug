@@ -1,0 +1,18 @@
+extends header.pug
+
+block content
+    div(class="ui" style="text-align:center;")
+        h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 업데이트
+
+    form(class="ui form" action="./update_process" method="post")
+        input(type="hidden" name="id" value=row.id)
+        div(class="field")
+            label 제목
+            input(type="text" name="title" value=row.title required)
+        div(class="field")
+            label 이름
+            input(type="text" name="name" value=row.name required readonly)
+        div(class="field")
+            label 내용
+            textarea(name="content")= row.content
+        button(class="ui button" type="submit") Submit

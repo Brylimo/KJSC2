@@ -15,7 +15,9 @@ block content
             for row in rows
                 tr
                     td= row.id
-                    td= row.title
+                    td
+                        - var url = `comment/${row.id}`
+                        a(href=url)= row.title
                     td= row.name
                     td= row.created
 

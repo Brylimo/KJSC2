@@ -7,10 +7,10 @@ block content
     form(class="ui form" action="./create_process" method="post")
         div(class="field")
             label 제목
-            input(type="text" name="title" placeholder="Title")
+            input(type="text" name="title" placeholder="Title" required)
         div(class="field")
             label 이름
-            input(type="text" name="name" placeholder="Name")
+            input(type="text" name="name" placeholder="Name" required)
         div(class="field")
             label 내용
             textarea(name="content" placeholder="Content")
