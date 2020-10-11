@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const indexRouter = require('./routes/index');
+const commentRouter = require('./routes/comment');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
+app.use('/comment', commentRouter);
 
 app.listen(3000, ()=>{
     console.log("server is running...");

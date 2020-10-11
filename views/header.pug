@@ -7,6 +7,7 @@ html(lang="en")
         link(rel="shortcut icon" type="image/png" href="http://localhost:3000/public//img/dog.png")
         link(href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inconsolata&family=Sansita+Swashed&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet")
         title KJSC
 
         style
@@ -22,6 +23,14 @@ html(lang="en")
                     div(class="ui transparent icon input")
                         input(type="text" placeholder="Search...")
                         i(class="search link icon")
+
+        div(class="ui" style="text-align:center;")
+            a(href="/" class="bottomheader" style="font-family: 'Dancing Script', cursive;") KIMJISEUNGCRAZY
+
+        div(class="ui text menu" style="justify-content: center;")
+            a(class="item itemsize" href="/") Home
+            a(class="item itemsize" href="/comment") Comments
+            a(class="item itemsize" href="/video") Videos
 
         block content
 
