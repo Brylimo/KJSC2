@@ -1,3 +1,6 @@
+# DB
+/mysql.json
+
 # dependencies
 /node_modules
 /.pnp

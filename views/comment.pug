@@ -12,18 +12,11 @@ block content
                 th 이름
                 th 작성일
         tbody
-            tr
-                td John Lilki
-                td September 14, 2013
-                td jhlilk22@yahoo.com
-                td 111
-            tr
-                td John Lilki
-                td September 14, 2013
-                td jhlilk22@yahoo.com
-                td 111
-            tr
-                td John Lilki
-                td September 14, 2013
-                td jhlilk22@yahoo.com
-                td 111
+            for row in rows
+                tr
+                    td= row.id
+                    td= row.title
+                    td= row.name
+                    td= row.created
+
+    a(href="comment/create_comment") 추가
