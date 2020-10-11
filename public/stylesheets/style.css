@@ -63,7 +63,7 @@ footer {
 }
 
 .cursor {
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .itemsize {
@@ -92,4 +92,11 @@ footer div {
     width: 80% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+.video1 {
+    margin-top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
 }

@@ -31,7 +31,6 @@ module.exports = function (db) {
         const userid = req.params['userId'];
         db.query(`SELECT * FROM kjscComment WHERE id = ?`, [userid], (err, row)=>{
             res.render('description', {row : row[0]});
-            console.log(row);
         });
     });
 

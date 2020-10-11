@@ -19,7 +19,7 @@ const port = process.env.PORT || 3000;
 
 const indexRouter = require('./routes/index');
 const commentRouter = require('./routes/comment')(db);
-const videoRouther = require('./routes/video');
+const videoRouter = require('./routes/video');
 
 app.locals.pretty = true;
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +32,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/comment', commentRouter);
+app.use('/video', videoRouter);
 
 app.listen(port, ()=>{
     console.log("server is running...");
