@@ -12,9 +12,19 @@ function paintImage(imgNumber) {
     aligndiv.appendChild(image);
 }
 
+function footer() {
+    const footer = document.querySelector('.footer');
+    console.log(footer);
+    footer.innerHTML = `<hr/>
+                        <div>
+                            <p> Copyright &copy;2020</p>
+                        </div>`;
+}
+
 function init() {
     const randomNumber = genRandom();
     paintImage(randomNumber);
+    setTimeout(footer, 500);
 }
 
 init();

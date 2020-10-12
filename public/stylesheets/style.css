@@ -143,3 +143,7 @@ footer div {
 .video-item.item img {
     max-width: 18rem;
 }
+
+.fine {
+    margin-bottom: 7rem !important;
+}

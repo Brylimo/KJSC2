@@ -2,7 +2,7 @@ extends header.pug
 
 block content
     div(class="ui container")
-        div(class="ui search")
+        div(class="ui search fine")
             form(class="search1")
                 div(class="ui icon input video1")
                     input(id="inputdata" class="prompt" type="text" placeholder="Search videos..." autocomplete="off")
@@ -16,8 +16,8 @@ block content
                         div(class="ui embed")
                             iframe(title="video player" class="player")
                         div(class="ui segment")
-                            h4(class="ui header header22")
-                            p(id="prime")
+                            h4(class="ui header header22" style="font-weight: 900 !important; font-size: 1.5rem;")
+                            p(id="prime" style="font-size: 1rem;")
                 
                 div(class="five wide column")
                     div(class="youtube ui relaxed divided list")

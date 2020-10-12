@@ -6,6 +6,13 @@ const API_KEY = "AIzaSyBC1AK08Wu30lBpv_mTXKjCpUnV9sZZTWQ";
 let cnt = 1;
 let videos = [];
 
+function over() {
+    setTimeout(function(){alert("비디오를 로드할 수 없습니다❗\n하루 비디오 제한량을 체크하세요.");}, 500);
+    youtube.innerHTML ='';
+    video_detail.innerHTML = '';
+    
+}
+
 const eventgame = (e) => {
     for (let i = 1; i <= 5; i++)
     {
@@ -70,7 +77,7 @@ function getVideo(data) {
             getDetail(video);
             cnt = 1;
         }).catch(function() {
-             alert("비디오를 로드할 수 없습니다❗\n하루 비디오 제한량을 체크하세요.");
+            over();
         });
 }
 
@@ -131,7 +138,7 @@ function init() {
             for (let i = 0; i < 5; i++) {pluss();}
             cnt = 1;
         }).catch(function() {
-             alert("비디오를 로드할 수 없습니다❗\n하루 비디오 제한량을 체크하세요.");
+            over();
         });
 }
 
