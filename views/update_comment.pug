@@ -4,7 +4,7 @@ block content
     div(class="ui" style="text-align:center;")
         h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 업데이트
 
-    form(class="ui form" action="./update_process" method="post")
+    form(class="ui form form1 " style="font-size:1.3rem;" action="./update_process" method="post")
         input(type="hidden" name="id" value=row.id)
         div(class="field")
             label 제목
@@ -15,4 +15,4 @@ block content
         div(class="field")
             label 내용
             textarea(name="content")= row.content
-        button(class="ui button" type="submit") Submit
+        button(class="ui button but" type="submit") Submit

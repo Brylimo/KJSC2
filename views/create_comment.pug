@@ -2,9 +2,9 @@ extends header.pug
 
 block content
     div(class="ui" style="text-align:center;")
-        h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 추가
+        h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 글 등록
 
-    form(class="ui form" action="./create_process" method="post")
+    form(class="ui form form1" style="font-size:1.3rem;" action="./create_process" method="post")
         div(class="field")
             label 제목
             input(type="text" name="title" placeholder="Title" required)
@@ -14,4 +14,4 @@ block content
         div(class="field")
             label 내용
             textarea(name="content" placeholder="Content")
-        button(class="ui button" type="submit") Submit
+        button(class="ui button but" type="submit") Submit

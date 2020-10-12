@@ -10,10 +10,10 @@ block content
     - const url1 = `${row.id}/update`
     - const url2 = `${row.id}/delete_process`
 
-    button(type="button")
-        a(href=url1) update
-
-    form(action=url2 method="post")
+    form(action=url2 method="post" class="but")
         input(type="hidden" name="id" value=row.id)
-        input(type="submit" value="delete")
+        input(type="submit" class="ui button deletebut" value="delete" style="color: black;")
+
+    button(type="button" class="ui primary button but updatebut")
+        a(href=url1 style="color: white;") update
 

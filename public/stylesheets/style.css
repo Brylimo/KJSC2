@@ -31,7 +31,7 @@ footer {
 }
 
 .bottomheader {
-    display: block;
+    display: inline-block;
     margin: auto 0;
     padding: 7.5rem 1.5rem 5rem 1.5rem;
     font-size: 5rem;
@@ -99,4 +99,47 @@ footer div {
     left: 50%;
     transform: translateX(-50%);
     width: 40%;
+}
+
+.buttonloc {
+    margin-top: 2.5rem !important;
+    margin-right: 15rem !important;
+    margin-bottom: 3rem !important;
+    float: right;
+    width: 5%;
+    height: 5%;
+}
+
+.form1 {
+    width: 60%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.but {
+    float: right;
+    font-size: 1.4rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.deletebut {
+    font-size: 1.4rem !important;
+    margin-bottom: 3rem !important;
+    margin-right: 22rem !important;
+}
+
+.updatebut {
+    font-size: 1.4rem !important;
+    margin-bottom: 3rem !important;
+    margin-right: 1rem !important;
+}
+
+.video-item {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.video-item.item img {
+    max-width: 18rem;
 }
