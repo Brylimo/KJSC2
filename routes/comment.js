@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const router = express.Router();
 const auth = require('../lib/auth.js');
@@ -5,6 +6,10 @@ const auth = require('../lib/auth.js');
 module.exports = function (db) {
 
     router.get('/', (req, res, next) => {
+        if(!auth.isOwner(req,res)){
+            response.redirect('/');
+            return false;
+        }
         const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment`, (err, rows) => {
                res.render('comment', {rows: rows.reverse(), auth: rauth});
@@ -12,6 +17,10 @@ module.exports = function (db) {
     });
 
     router.get('/create_comment', (req, res, next) => {
+        if(!auth.isOwner(req,res)){
+            response.redirect('/');
+            return false;
+        }
         const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         res.render('create_comment', {auth: rauth});
     });
@@ -31,6 +40,10 @@ module.exports = function (db) {
     });
 
     router.get('/:userId', (req, res, next) => {
+        if(!auth.isOwner(req,res)){
+            response.redirect('/');
+            return false;
+        }
         const userid = req.params['userId'];
         const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment WHERE id = ?`, [userid], (err, row)=>{
@@ -39,6 +52,10 @@ module.exports = function (db) {
     });
 
     router.get('/:userId/update', (req, res, next) => {
+        if(!auth.isOwner(req,res)){
+            response.redirect('/');
+            return false;
+        }
         const userid = req.params['userId'];
         const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment WHERE id = ?`, [userid], (err, row)=>{
