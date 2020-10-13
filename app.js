@@ -37,7 +37,7 @@ app.use(session({
 app.use(cookieParser());
 app.use(flash());
 
-const passport = require('./lib/passport')(app);
+const passport = require('./lib/passport')(app, db);
 
 const indexRouter = require('./routes/index');
 const commentRouter = require('./routes/comment')(db);
