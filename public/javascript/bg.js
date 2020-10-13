@@ -14,7 +14,6 @@ function paintImage(imgNumber) {
 
 function footer() {
     const footer = document.querySelector('.footer');
-    console.log(footer);
     footer.innerHTML = `<hr/>
                         <div>
                             <p> Copyright &copy;2020</p>

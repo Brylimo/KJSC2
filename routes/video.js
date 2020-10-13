@@ -1,9 +1,10 @@
 const express = require('express');
-const request = require('request');
 const router = express.Router();
+const auth = require('../lib/auth.js');
 
 router.get('/', (req, res, next) => {
-    res.render('video');
+    const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
+    res.render('video', {auth: rauth});
 });
 
 module.exports = router;

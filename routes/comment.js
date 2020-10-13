@@ -1,16 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../lib/auth.js');
 
 module.exports = function (db) {
 
     router.get('/', (req, res, next) => {
+        const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment`, (err, rows) => {
-               res.render('comment', {rows: rows.reverse()});
+               res.render('comment', {rows: rows.reverse(), auth: rauth});
         });
     });
 
     router.get('/create_comment', (req, res, next) => {
-        res.render('create_comment');
+        const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
+        res.render('create_comment', {auth: rauth});
     });
 
     router.post('/create_process', (req, res, next) => {
@@ -29,15 +32,17 @@ module.exports = function (db) {
 
     router.get('/:userId', (req, res, next) => {
         const userid = req.params['userId'];
+        const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment WHERE id = ?`, [userid], (err, row)=>{
-            res.render('description', {row : row[0]});
+            res.render('description', {row : row[0], auth: rauth});
         });
     });
 
     router.get('/:userId/update', (req, res, next) => {
         const userid = req.params['userId'];
+        const rauth = {own: auth.isOwner(req, res), user: auth.user(req, res)};
         db.query(`SELECT * FROM kjscComment WHERE id = ?`, [userid], (err, row)=>{
-            res.render('update_comment', {row: row[0]});
+            res.render('update_comment', {row: row[0], auth: rauth});
         });
     });
 

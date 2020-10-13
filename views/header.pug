@@ -19,6 +19,11 @@ html(lang="en")
         div(class="ui pointing menu" style="margin-top: 0px; padding: 8px 0; margin-bottom:0px; background-color:#f5fbfd;") 
             a(href="/" class="cursor topheader" style="font-family: 'Bad Script', cursive;") KJSC
             div(class="right menu")
+                if (auth.own)
+                    a(href="/auth/logout") logout
+                else
+                    a(href="/auth/login") login | 
+                    a(href="/auth/register") register
                 div(class="item")
                     form(class="header_form")
                         div(class="ui transparent icon input")
@@ -36,4 +41,3 @@ html(lang="en")
         script(src="../public/javascript/header.js")
 
         block content
-

@@ -10,15 +10,12 @@ function over() {
     setTimeout(function(){alert("비디오를 로드할 수 없습니다❗\n하루 비디오 제한량을 체크하세요.");}, 500);
     youtube.innerHTML ='';
     video_detail.innerHTML = '';
-    
 }
 
 const eventgame = (e) => {
     for (let i = 1; i <= 5; i++)
     {
         const game = 'wow'+ i;
-        console.log(game);
-        console.log(e.currentTarget);
         if (e.currentTarget.classList.contains(game))
         {
             getDetail(videos[i-1]);
@@ -52,7 +49,6 @@ function getDetail(video) {
 function getItem(video) {
     const son = 'header1' + cnt;
     const lim = 'image' + cnt;
-    console.log(son);
     const image = document.querySelector(`.${lim}`);
     const header = document.querySelector(`.${son}`);    image.src = video.snippet.thumbnails.medium.url;
     image.alt= video.snippet.title;
@@ -85,7 +81,6 @@ bar.addEventListener("submit", function(event){
     event.preventDefault();
 
     const data = inputdata.value;
-    console.log(data);
     getVideo(data);
 }, false);
 
@@ -94,7 +89,6 @@ function initDetail(video) {
         video_detail.innerHTML = '<div>Loading...</div>';
     }
 
-    console.log("nice");
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
     const iframe = document.querySelector('.player');
@@ -108,7 +102,6 @@ function initDetail(video) {
 function initItem(video) {
     const son = 'header1' + cnt;
     const lim = 'image' + cnt;
-    console.log(son);
     const image = document.querySelector(`.${lim}`);
     const header = document.querySelector(`.${son}`);
     image.src = video.snippet.thumbnails.medium.url;
@@ -122,14 +115,13 @@ function init() {
     const max = "5";
     const type ="video";
     const query = "buildings";
-    console.log('hello');
+
     fetch(
         `https://www.googleapis.com/youtube/v3/search?part=${part}&maxResults=${max}&key=${API_KEY}&q=${query}&type=${type}`
         ).then(function(response) {
             return response.json();
         }).then(function(json) {
             videos = json.items;
-            console.log(videos);
             videos.map(video => { initItem(video); });
             return videos[0];
         }).then(function(video) {
