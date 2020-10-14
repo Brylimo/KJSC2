@@ -4,8 +4,7 @@ block content
     div(class="ui" style="text-align:center;")
         h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;")= row.title
 
-    div(class="paragraph")
-        p= row.content
+    div(class="paragraph")= row.content
 
     - const url1 = `${row.cid}/update`
     - const url2 = `${row.cid}/delete_process`

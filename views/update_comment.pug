@@ -5,14 +5,15 @@ block content
         h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 업데이트
 
     form(class="ui form form1 " style="font-size:1.3rem;" action="./update_process" method="post")
-        input(type="hidden" name="id" value=row.cid)
-        div(class="field")
-            label 제목
-            input(type="text" name="title" value=row.title maxlength= "30" required)
-        div(class="field")
-            label 이름
-            input(type="text" name="name" value=row.username maxlength= "20" required readonly)
-        div(class="field")
-            label 내용
-            textarea(name="content")= row.content
-        button(class="ui button but" type="submit") Submit
+        div(class="register1")
+            input(type="hidden" name="id" value=row.cid)
+            div(class="field")
+                label 제목
+                input(type="text" name="title" value=row.title maxlength= "30" required)
+            div(class="field")
+                label 이름
+                input(type="text" name="name" value=row.username maxlength= "20" required readonly)
+            div(class="field")
+                label 내용
+                textarea(name="content")= row.content
+            button(class="ui primary button but" type="submit") Submit

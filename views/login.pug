@@ -5,14 +5,22 @@ block content
         h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 로그인
 
     input(type="hidden" value=feedback class="feedback")
-    form(class="ui form form1" style="font-size:1.3rem;" action="./login_process" method="post")
-        div(class="field")
-            label 아이디
-            input(type="text" name="id" placeholder="사용자 ID를 입력해주세요." maxlength= "30" required)
-        div(class="field")
-            label 비밀번호
-            input(type="password" name="pwd" placeholder="비밀번호를 입력해주세요." required)
-        button(class="ui button but" type="submit") login
+    form(class="ui large form form1" style="font-size:1.3rem;" action="./login_process" method="post")
+        div(class="ui stacked segment loginshape")
+            div(class="sonny")
+                div(class="field try1")
+                    div(class="ui left icon input")
+                        i(class="user icon" style="font-size:1.5rem;")
+                        input(type="text" name="id" placeholder="사용자 ID를 입력해주세요." maxlength= "30" style="font-size:1.5rem;" required)
+                div(class="field try")
+                    div(class="ui left icon input")
+                        i(class="lock icon" style="font-size:1.5rem;")
+                        input(type="password" name="pwd" placeholder="비밀번호를 입력해주세요." style="font-size:1.5rem;" required)
+                button(class="ui fluid button large teal submit todo" type="submit" style="font-size:1.5rem;") Login
+
+    div(class="ui message seung")
+        p Not to us?  
+            a(href="/auth/register") Sign Up
 
     script. 
         const feedback = document.querySelector('.feedback');

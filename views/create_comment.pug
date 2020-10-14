@@ -5,10 +5,11 @@ block content
         h1(class="bottomheader2" style="font-family: 'Noto Sans KR', sans-serif;") 글 등록
 
     form(class="ui form form1" style="font-size:1.3rem;" action="./create_process" method="post")
-        div(class="field")
-            label 제목
-            input(type="text" name="title" placeholder="Title" maxlength= "30" required)
-        div(class="field")
-            label 내용
-            textarea(name="content" placeholder="Content")
-        button(class="ui primary button but" type="submit") Submit
+        div(class="register1")
+            div(class="field")
+                label 제목
+                input(type="text" name="title" placeholder="Title" maxlength= "30" required)
+            div(class="field")
+                label 내용
+                textarea(name="content" placeholder="Content")
+            button(class="ui primary button but" type="submit") Submit
