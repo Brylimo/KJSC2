@@ -7,13 +7,13 @@ block content
     div(class="paragraph")
         p= row.content
 
-    - const url1 = `${row.id}/update`
-    - const url2 = `${row.id}/delete_process`
+    - const url1 = `${row.cid}/update`
+    - const url2 = `${row.cid}/delete_process`
 
-    form(action=url2 method="post" class="but")
-        input(type="hidden" name="id" value=row.id)
-        input(type="submit" class="ui button deletebut" value="delete" style="color: black;")
-
-    button(type="button" class="ui primary button but updatebut")
-        a(href=url1 style="color: white;") update
+    if (answer)
+        form(action=url2 method="post" class="but")
+            input(type="hidden" name="id" value=row.cid)
+            input(type="submit" class="ui button deletebut" value="delete" style="color: black;")
+        button(type="button" class="ui primary button but updatebut")
+            a(href=url1 style="color: white;") update
 

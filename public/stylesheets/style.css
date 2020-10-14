@@ -147,3 +147,11 @@ footer div {
 .fine {
     margin-bottom: 7rem !important;
 }
+
+.headertop {
+    line-height: 1.6rem !important;
+}
+
+.headertop:first-child {
+    margin-right: 1rem;
+}

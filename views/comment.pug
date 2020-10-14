@@ -14,11 +14,11 @@ block content
         tbody
             for row in rows
                 tr
-                    td= row.id
+                    td= row.cid
                     td
-                        - var url = `comment/${row.id}`
+                        - var url = `comment/${row.cid}`
                         a(href=url)= row.title
-                    td= row.name
+                    td= row.username
                     td= row.created
 
     button(class="ui primary button buttonloc")

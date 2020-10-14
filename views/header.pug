@@ -18,12 +18,13 @@ html(lang="en")
 
         div(class="ui pointing menu" style="margin-top: 0px; padding: 8px 0; margin-bottom:0px; background-color:#f5fbfd;") 
             a(href="/" class="cursor topheader" style="font-family: 'Bad Script', cursive;") KJSC
-            div(class="right menu")
+            div(class="right menu" style="position:relative;")
                 if (auth.own)
-                    a(href="/auth/logout") logout
+                    p(class="ui yellow basic button headertop")= auth.user
+                    a(href="/auth/logout" class="ui red basic button headertop" style="margin-right:1rem;") logout
                 else
-                    a(href="/auth/login") login | 
-                    a(href="/auth/register") register
+                    a(href="/auth/login" class="ui blue basic button headertop") login
+                    a(href="/auth/register" class="ui teal basic button headertop" style="margin-right:1rem;") register
                 div(class="item")
                     form(class="header_form")
                         div(class="ui transparent icon input")
