@@ -6,6 +6,7 @@ const session = require('express-session');
 const mysql = require('mysql2');
 const LokiStore = require('connect-loki')(session)
 const flash = require('connect-flash');
+const favicon = require('serve-favicon');
 //const FileStore = require('session-file-store')(session);
 
 const data = fs.readFileSync('./mysql.json');
@@ -26,6 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname,'public','img','dog.png')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
