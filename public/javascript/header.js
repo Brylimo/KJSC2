@@ -25,15 +25,15 @@ form.addEventListener("submit", function(event) {
         window.open("https://www.facebook.com");
     } else if (ldata === 'admin' || ldata === '김지승' || ldata === '지승' || ldata === '관리자' || ldata === 'kimjiseung') {
         window.location.href = '/';
-    } else if (ldata === '화정' || ldata === '화정중학교' || ldata === '중학교' || ldata === '화정중' || ldata === '학교') {
+    } else if (ldata === '화정' || ldata === '화정중학교' || ldata === '화정중') {
         window.open("http://hwajung.ms.kr/");
-    } else if (ldata === 'ebs' || ldata === '공부' || ldata === '수학' || ldata === '영어' || ldata === '국어' || ldata === 'study') {
+    } else if (ldata === 'ebs') {
         window.open("https://www.ebs.co.kr/main");
     } else if (ldata === '인스타그램' || ldata === 'instagram') {
         window.open("https://www.instagram.com/?hl=ko");
     } else if (ldata === '넷플릭스' || ldata === 'netflix') {
         window.open("https://www.netflix.com/kr-en/");
     } else {
-        alert(`${data}에 알맞은 검색 결과가 없습니다.`);
+        window.open(`https://search.naver.com/search.naver?query=${ldata}`);
     }
 })
