@@ -3,12 +3,16 @@
 
 # Demo Web Site
 ### Home page
-![home](./image/home.png){: width="300" height="300"){: .center}
+![home](./image/home.png)
+
 ### Login page
-![login](./image/login.png){: width="300" height="300"){: .center}
+![login](./image/login.png)
+
 ### Register page
-![register](./image/register.png){: width="300" height="300"){: .center}
+![register](./image/register.png)
+
 ### Comment page
-![comment](./image/comment.png){: width="300" height="300"){: .center}
+![comment](./image/comment.png)
+
 ### Video page
-![comment](./image/video.png){: width="300" height="300"){: .center}
+![comment](./image/video.png)
